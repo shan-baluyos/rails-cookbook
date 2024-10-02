@@ -3,7 +3,7 @@ class Recipe < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true
-  validates :rating, inclusion: { in: (0..10) }
+  validates :rating, inclusion: { in: (0..5) }
   # another way for the rating:
   # validates :rating, numercality { greater than... check notes}
 end
